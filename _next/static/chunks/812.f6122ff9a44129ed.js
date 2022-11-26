@@ -24,7 +24,6 @@ const state = {
     zkapp: null,
     transaction: null
 };
-// ---------------------------------------------------------------------------------------
 const functions = {
     loadSnarkyJS: async (args)=>{
         await snarkyjs__WEBPACK_IMPORTED_MODULE_0__/* .isReady */ .DK;
@@ -52,8 +51,7 @@ const functions = {
     },
     getNum: async (args)=>{
         const currentNum = await state.zkapp.num.get();
-        return;
-        JSON.stringify(currentNum.toJSON());
+        return JSON.stringify(currentNum.toJSON());
     },
     createUpdateTransaction: async (args)=>{
         const transaction = await snarkyjs__WEBPACK_IMPORTED_MODULE_0__/* .Mina.transaction */ .No.transaction(()=>{
